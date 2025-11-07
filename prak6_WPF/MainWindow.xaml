@@ -1,0 +1,90 @@
+﻿<Window x:Class="prak6_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prak6_WPF"
+        mc:Ignorable="d"
+        Title="Регистрация нового пользователя" Height="595" Width="800">
+
+    <DockPanel LastChildFill="False">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="SkyBlue">
+            <Button Content="Главная" Width="130" Height="35" Margin="5"></Button>
+            <Button Content="Профиль" Width="130" Height="35" Margin="5"></Button>
+            <Button Content="Настройки" Width="130" Height="35" Margin="5"></Button>
+            <Button Content="Помощь" Width="130" Height="35" Margin="5"></Button>
+        </StackPanel>
+
+
+
+        <Grid Height="300" Width="625" Margin="10" DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="270"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="6" BorderBrush="Black" BorderThickness="1" Margin="5">
+                <Button Content="Загрузить фото" Height="25" Margin="10" VerticalAlignment="Bottom"></Button>
+            </Border>
+
+
+            <Label Content="ФИО:" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <Label Content="Email:" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <Label Content="Телефон:" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <Label Content="Дата рождения:" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <Label Content="Пол:" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <Label Content="Пароль:" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+
+
+            <TextBox Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="265" Height="30"></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="265" Height="30"></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="265" Height="30"></TextBox>
+            <DatePicker Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="265" Height="30"></DatePicker>
+
+            <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <RadioButton Margin="5">Мужской</RadioButton>
+                <RadioButton Margin="5">Женский</RadioButton>
+            </StackPanel>
+
+            <TextBox Grid.Row="5" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="265" Height="30"></TextBox>
+
+            <StackPanel Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Label Content="Подтверждение пароля:" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+                <TextBox Width="221" Height="30"></TextBox>
+            </StackPanel>
+        </Grid>
+
+
+
+        <WrapPanel Background="LightGray" Margin="5" DockPanel.Dock="Top" Width="590" Height="170">
+            <Label Content="* Поле должно содержать минимум 8 символов." Margin="10"></Label>
+            <Label Content="* Email должен быть в формате name@mail.com" Margin="10"></Label>
+            <Label Content="* Все поля обязательны." Margin="10"></Label>
+        </WrapPanel>
+
+        <StatusBar DockPanel.Dock="Bottom" Background="LightGray" Height="30" >
+            <Label Content="Готово"></Label>
+        </StatusBar>
+
+        <StackPanel Height="40" Orientation="Horizontal" DockPanel.Dock="Right" Margin="0, 10,20, 15">
+            <Button Content="Зарегистрироваться" Margin="5" Width="150" Height="20"></Button>
+            <Button Content="Отмена" Margin="5" Width="100" Height="20"></Button>
+        </StackPanel>
+
+    </DockPanel>
+
+
+</Window>
